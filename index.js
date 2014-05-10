@@ -6,5 +6,6 @@ module.exports = function(opts) {
   return function*(next) {
     var body = yield* concat(this.req, opts);
     this.request.body = JSON.parse(body);
+    yield* next;
   }
 };

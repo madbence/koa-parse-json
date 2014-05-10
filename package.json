@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/madbence/koa-parse-json/issues"
   },
-  "homepage": "https://github.com/madbence/koa-parse-json"
+  "homepage": "https://github.com/madbence/koa-parse-json",
+  "dependencies": {
+    "co-concat-stream": "0.0.1"
+  }
 }
