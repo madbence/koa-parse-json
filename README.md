@@ -3,7 +3,7 @@
 Parse json request body, generator style.
 
 It seems that similar modules don't provide sane stack traces,
-or simply ignores errors. Because this one is completly generator-based,
+or simply ignore errors. Because this one is completly generator-based,
 it provides proper stacktraces on parse error.
 
 ## Install
