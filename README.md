@@ -35,6 +35,8 @@ Returns a koa middleware, that can parse JSON request body.
 It stops reading after `opts.limit` bytes, and throws 413,
 if `Content-Length` doesn't match with request length, 400 is throwed.
 
+Default `opts.limit` is 1MB.
+
 ## License
 
 MIT
