@@ -9,14 +9,16 @@ module.exports = function(opts) {
       this.throw(413);
     }
     var body = yield* concat(this.req, opts);
-    if(length) {
+    if (!body) {
+      this.request.body = null;
+    } else if(length) {
       if(body.length < length) {
         this.throw(400, 'Content-Length mismatch!')
       } else if(body.length > length) {
         this.throw(413, 'Content-Length mismatch!')
       }
+      this.request.body = JSON.parse(body);
     }
-    this.request.body = JSON.parse(body);
     yield* next;
   }
 };
