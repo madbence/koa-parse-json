@@ -2,7 +2,7 @@ var concat = require('co-concat-stream');
 
 module.exports = function(opts) {
   opts = opts || {};
-  opts.limit = opts.limit || 2<<20; // 1MB
+  opts.limit = opts.limit || 1<<20; // 1MB
   return function*(next) {
     var length = this.req.headers['content-length'];
     if(length > opts.limit) {
